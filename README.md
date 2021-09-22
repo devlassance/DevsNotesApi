@@ -9,4 +9,4 @@
 
 ## Projeto Devsnotes API
 
-Nesse projeto desenvolvo um sistema CRUD para registro de notas.
+Nesse projeto desenvolvo a api para um sistema CRUD de registro de notas.
