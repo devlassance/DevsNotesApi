@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\NoteController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,9 +22,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/ping', function(Request $request){
     return ['pong' => true];
 });
-/*
+
 //Pegar todas as notas
-Route::get('/notes', '');
+Route::get('/notes', [NoteController::class, 'all']);
+/*
 //Pegar uma nota especifica
 Route::get('/notes/{id}', '');
 //Requisição post na listagem
