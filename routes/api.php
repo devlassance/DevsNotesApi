@@ -25,13 +25,15 @@ Route::get('/ping', function(Request $request){
 
 //Pegar todas as notas
 Route::get('/notes', [NoteController::class, 'all']);
-/*
+
 //Pegar uma nota especifica
-Route::get('/notes/{id}', '');
-//Requisição post na listagem
-Route::post('/notes', '');
+Route::get('/note/{id}',  [NoteController::class, 'one']);
+
+//Adicionar uma nova note
+Route::post('/note', [NoteController::class, 'new']);
+
 //Editar uma nota
-Route::put('/notes/{id}', '');
+Route::put('/note/{id}', [NoteController::class, 'edit']);
+
 //Deletar uma nota
-Route::delete('/notes/{id}', '');
-*/
+Route::delete('/note/{id}', [NoteController::class, 'delete']);
